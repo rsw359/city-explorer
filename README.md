@@ -3,3 +3,5 @@
 This document is keep track of this project.
 
 ## Day 1: Asynchronous code, and APIs
+
+- Created Repos and setup Api and access tokens
