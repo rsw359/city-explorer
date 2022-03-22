@@ -1,10 +1,11 @@
 import './App.css';
 import Explorer from './Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form } from 'react-bootstrap';
 
 function App() {
   return (
-    <main>
+    <main className='main'>
       <Explorer/>
       
     </main>
