@@ -1,5 +1,7 @@
 # City Explorer
 
+## Deployed at:
+
 The City Explorer Project was designed to allow users to search for location data for their favorite cities around the world                     .
 
 ## Day 1: Asynchronous code, and APIs
@@ -26,4 +28,4 @@ Finish time: 2pm
 
 Actual time needed to complete: 2 hours
 
-![this is the UML](src/image/Lab6UML.png)
+![this is the WWRC](src/image/Lab6UML.png)

@@ -1,11 +1,24 @@
 .Card {
   border-radius: 5px;
-  color:#fb8b24;
+  /* color:#fb8b24; */
+  
   
 }
 
 .form-label {
   color: #fb8b24;
   font-size: 150px;
+}
+
+
+.input-form {
+  margin-left: 400px;
+}
+
+.search-container{
+  margin-left: 100px;
+}
+.search-bar {
+  display:inline-block !important;
 }
 
