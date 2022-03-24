@@ -28,4 +28,4 @@ Finish time: 2pm
 
 Actual time needed to complete: 2 hours
 
-![this is the UML](src/image/Lab6UML.png)
+![this is the WWRC](src/image/Lab6UML.png)
