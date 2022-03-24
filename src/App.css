@@ -51,5 +51,10 @@
 
 }
 
+.card-body {
+  width: 50vh;
+}
 
-
+.form-control{
+  margin-left: 100px;
+}

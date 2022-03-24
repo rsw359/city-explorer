@@ -7,13 +7,9 @@ class ErrorModal extends React.Component {
     return ( 
 
       <Modal
-        show={this.props.modalDataState}
-
-      
+        show={this.props.modalDataState}      
       >
-
         <Modal.Header>
-
         </Modal.Header>
 
         <Modal.Body>
@@ -22,6 +18,7 @@ class ErrorModal extends React.Component {
         <Modal.Footer>
           <Button onClick={this.props.hideModal}>CLOSE</Button>
         </Modal.Footer>
+        
       </Modal>
 
     )

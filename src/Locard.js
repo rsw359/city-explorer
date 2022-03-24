@@ -11,7 +11,7 @@ class Locard extends React.Component {
   render() {
     let cardMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.props.lat},${this.props.lon}&zoom=10`
     return(
-      <Card className='Card'  style={{ width: '18rem' }}>
+      <Card className='Card'  style={{ width: '50vh' }}>
     
     <Card.Body>
       <Card.Img src={cardMap}/>
