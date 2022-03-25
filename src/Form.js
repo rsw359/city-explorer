@@ -63,11 +63,11 @@ class Explorer extends React.Component {
       // this.openModal();
 
     }
-    let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
+    let weatherUrl = `${process.env.REACT_APP_SERVER}weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
     let backEndCall = await axios.get(weatherUrl);  
     this.setState({ weatherData: backEndCall.data});
     
-    let url=`${process.env.REACT_APP_SERVER}/movies?city_name=${this.state.location}`;
+    let url=`${process.env.REACT_APP_SERVER}movies?city_name=${this.state.location}`;
     console.log(url);
     let movieBackendCall = await axios.get(url);
     this.setState({
@@ -77,9 +77,9 @@ class Explorer extends React.Component {
   };
 
   render() {
-    // console.log(this.state);
-    // console.log(this.state.weatherData);
-    // console.log(this.state.movieData);
+    console.log(this.state);
+    console.log(this.state.weatherData);
+    console.log(this.state.movieData);
     return (
       <>
         <Form>
