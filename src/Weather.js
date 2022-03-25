@@ -16,7 +16,8 @@ class Weather extends React.Component {
     <Card.Body>       
       
       <Card.Text>
-      Today's Weather: {this.props.weatherData}
+      Today's Weather: {this.props.weatherData[0].description}
+      Today's Date:    {this.props.weatherData[0].date}
       </Card.Text>
       
     </Card.Body>
