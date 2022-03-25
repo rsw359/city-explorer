@@ -77,9 +77,9 @@ class Explorer extends React.Component {
   };
 
   render() {
-    console.log(this.state);
-    console.log(this.state.weatherData);
-    console.log(this.state.movieData);
+    // console.log(this.state);
+    // console.log(this.state.weatherData);
+    // console.log(this.state.movieData);
     return (
       <>
         <Form>
