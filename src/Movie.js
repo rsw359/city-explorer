@@ -9,7 +9,7 @@ class Movie extends React.Component {
   };
 
   render() {
-    // console.log(this.props.movies);
+    console.log(this.props.movies);
     return(
       <Card className='Card'  style={{ width: '50vh' }}>
     
