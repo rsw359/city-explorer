@@ -17,7 +17,9 @@ class Explorer extends React.Component {
     this.state = {
       data: {},
       location: {},
+      hasWeatherData: false,
       weatherData: '',
+      hasMovieData: false,
       movieData: '',
       errMessage: '',
       modalDataState: false,
@@ -63,22 +65,36 @@ class Explorer extends React.Component {
       // this.openModal();
 
     }
-    let weatherUrl = `${process.env.REACT_APP_SERVER}weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
-    let backEndCall = await axios.get(weatherUrl);  
-    this.setState({ weatherData: backEndCall.data});
-    
-    let url=`${process.env.REACT_APP_SERVER}movies?city_name=${this.state.location}`;
+    this.getMovies();
+    this.getWeather();
+
+  };
+
+  getWeather = async () => {
+    let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?lat=${this.state.data.lat}&lon=${this.state.data.lon}`
+    console.log(weatherUrl);
+    let backEndCall = await axios.get(weatherUrl);
+    this.setState({
+      weatherData: backEndCall.data,
+      hasWeatherData: true
+    });
+  }
+
+  getMovies = async () => {
+    let url = `${process.env.REACT_APP_SERVER}/movies?city_name=${this.state.location}`;
     console.log(url);
     let movieBackendCall = await axios.get(url);
     this.setState({
-    movieData: movieBackendCall.data
+      movieData: movieBackendCall.data,
+      hasMovieData: true
     });
-    
-  };
+
+  }
+
+
 
   render() {
-    console.log(this.state);
-    console.log(this.state.weatherData);
+
     console.log(this.state.movieData);
     return (
       <>
@@ -110,23 +126,18 @@ class Explorer extends React.Component {
         <ErrorModal
           modalDataState={this.state.modalDataState}
           hideModal={this.hideModal}
-          errorCode={this.state.errMessage} 
+          errorCode={this.state.errMessage}
         />
         {
-          this.state.weatherData && <Weather weatherData={this.state.weatherData}
+          this.state.hasWeatherData && <Weather weatherData={this.state.weatherData}
           />
         }
-        
+
         {
-          this.state.movieData && <Movie movies={this.state.movieData}/>          
+          this.state.movieData.length && <Movie movies={this.state.movieData} />
         }
-        
-        {/* {this.state.movieData ? (this.state.movieData[0].map((mov) => 
-          <Movie 
-          title={mov.title}
-          pic={mov.backdrop_path}
-          />
-         )) : null } */}
+
+      
       </>
 
     )

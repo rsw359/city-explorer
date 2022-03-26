@@ -29,3 +29,27 @@ Finish time: 2pm
 Actual time needed to complete: 2 hours
 
 ![this is the WWRC](src/image/Lab6UML.png)
+
+## Name of feature: *Error Modal*
+
+Estimate of time needed to complete: 1.5
+
+Start time: 12 pm
+
+Finish time: 2pm
+
+Actual time needed to complete: 2 hours
+
+![this is the WWRC](src/image/Lab6UML.png)
+
+## Name of feature: *Error Modal*
+
+Estimate of time needed to complete: 1.5
+
+Start time: 12 pm
+
+Finish time: 2pm
+
+Actual time needed to complete: 2 hours
+
+![this is the WWRC](src/image/Lab6UML.png)
